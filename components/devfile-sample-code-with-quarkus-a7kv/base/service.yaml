@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-code-with-quarkus-a7kv
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-code-with-quarkus-a7kv
+    app.kubernetes.io/part-of: load-app-cb850684-e9a6-4dca-abb8-4afd707f65c0
+  name: devfile-sample-code-with-quarkus-a7kv
+spec:
+  ports:
+  - name: "8081"
+    port: 8081
+    targetPort: 8081
+  selector:
+    app.kubernetes.io/instance: devfile-sample-code-with-quarkus-a7kv
+status:
+  loadBalancer: {}
